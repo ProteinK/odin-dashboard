@@ -1,0 +1,57 @@
+body {
+  margin: 0px;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 6fr;
+  grid-template-rows: 1fr 5fr;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar main-content";
+}
+
+.sidebar {
+  background: rgb(24, 146, 211);
+  color: white;
+  grid-area: sidebar;
+}
+
+.sidebar>.grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  place-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+.sidebar>.grid:nth-child(2),
+.sidebar>.grid:nth-child(3) {
+  margin-top: 50px;
+}
+
+.sidebar .links,
+.sidebar h1 {
+  justify-self: left;
+}
+
+.sidebar .links {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.header {
+  background: white;
+  grid-area: header;
+}
+
+.main-content {
+  background: rgb(225, 232, 240);
+  grid-area: main-content;
+}
